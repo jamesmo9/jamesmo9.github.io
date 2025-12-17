@@ -1,0 +1,19 @@
+:root { --bg: #2c3e50; --accent: #3498db; --text: #fff; }
+
+/* Theme Colors */
+[data-theme="christmas"] { --bg: #1e392a; --accent: #e74c3c; } /* Green & Red */
+[data-theme="winter"] { --bg: #2c3e50; --accent: #00d4ff; }
+[data-theme="halloween"] { --bg: #1a1a1a; --accent: #ff6600; }
+
+body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
+.app-container { 
+    background: var(--bg); height: 100vh; 
+    display: flex; justify-content: center; align-items: center; 
+    transition: 1s; 
+}
+.weather-card { 
+    background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+    padding: 40px; border-radius: 30px; text-align: center; color: var(--text);
+    width: 80%; border: 1px solid rgba(255,255,255,0.2);
+}
+#temp { font-size: 5rem; color: var(--accent); font-weight: bold; }

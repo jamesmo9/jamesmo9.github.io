@@ -1,0 +1,9 @@
+{
+  "name": "Seasonal Weather",
+  "short_name": "Weather",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1e392a",
+  "theme_color": "#1e392a",
+  "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/1163/1163736.png", "sizes": "512x512", "type": "image/png" }]
+}
