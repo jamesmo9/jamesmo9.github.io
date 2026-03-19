@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Seasonal Weather</title>
+    <title>NYC Time</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#0f172a">
     <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
-    <div class="app-container" id="app" data-theme="default">
-        <div class="weather-card">
-            <h1 id="season-title">SEASONAL</h1>
-            <div id="temp">--°</div>
-            <p id="desc">Fetching Weather...</p>
-            <p id="city">Location</p>
-        </div>
-    </div>
+    <main class="app-shell">
+        <section class="clock-card" aria-live="polite">
+            <p class="eyebrow">Current time in</p>
+            <h1>New York City</h1>
+            <div class="time" id="time">--:--:--</div>
+            <p class="date" id="date">Loading date…</p>
+            <p class="timezone">Eastern Time · America/New_York</p>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
-
