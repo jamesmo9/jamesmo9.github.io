@@ -1,9 +1,15 @@
 {
-  "name": "Seasonal Weather",
-  "short_name": "Weather",
+  "name": "NYC Time",
+  "short_name": "NYC Time",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#1e392a",
-  "theme_color": "#1e392a",
-  "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/1163/1163736.png", "sizes": "512x512", "type": "image/png" }]
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/747/747310.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
