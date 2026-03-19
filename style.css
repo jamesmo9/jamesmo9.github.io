@@ -1,19 +1,77 @@
-:root { --bg: #2c3e50; --accent: #3498db; --text: #fff; }
-
-/* Theme Colors */
-[data-theme="christmas"] { --bg: #1e392a; --accent: #e74c3c; } /* Green & Red */
-[data-theme="winter"] { --bg: #2c3e50; --accent: #00d4ff; }
-[data-theme="halloween"] { --bg: #1a1a1a; --accent: #ff6600; }
-
-body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
-.app-container { 
-    background: var(--bg); height: 100vh; 
-    display: flex; justify-content: center; align-items: center; 
-    transition: 1s; 
+:root {
+    --bg-top: #0f172a;
+    --bg-bottom: #1d4ed8;
+    --card-bg: rgba(15, 23, 42, 0.65);
+    --card-border: rgba(255, 255, 255, 0.18);
+    --text-main: #e2e8f0;
+    --text-muted: #bfdbfe;
+    --accent: #fbbf24;
 }
-.weather-card { 
-    background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
-    padding: 40px; border-radius: 30px; text-align: center; color: var(--text);
-    width: 80%; border: 1px solid rgba(255,255,255,0.2);
+
+* {
+    box-sizing: border-box;
 }
-#temp { font-size: 5rem; color: var(--accent); font-weight: bold; }
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Inter, Arial, sans-serif;
+    background: linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+    color: var(--text-main);
+}
+
+body {
+    min-height: 100vh;
+}
+
+.app-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.clock-card {
+    width: min(100%, 420px);
+    padding: 32px;
+    border-radius: 28px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(16px);
+    text-align: center;
+}
+
+.eyebrow,
+.timezone {
+    margin: 0;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+h1 {
+    margin: 12px 0 20px;
+    font-size: clamp(2rem, 6vw, 2.75rem);
+}
+
+.time {
+    font-size: clamp(3rem, 12vw, 5rem);
+    font-weight: 700;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.date {
+    margin: 16px 0 10px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+    .clock-card {
+        padding: 24px;
+        border-radius: 22px;
+    }
+}
